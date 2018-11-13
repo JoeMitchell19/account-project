@@ -1,5 +1,7 @@
 package com.qa.application;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -15,6 +17,12 @@ public class App {
 		Account accountSearchedFor = inputData.findAccount(3);
 		App ap = new App();
 		ap.printInfo(accountSearchedFor);
+		JSONConverter json = new JSONConverter();
+		try {
+			json.convertPerson(accountSearchedFor);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
 	}
 	public void printInfo(Account person) {
 		System.out.println("First Name: " +person.getFirstName());
