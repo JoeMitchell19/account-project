@@ -22,4 +22,7 @@ public class Service {
 		return retrievedAccount;
 
 	}
+	public HashMap<Integer, Account> retrieveMap(){
+		return personhashmap;
+	}
 }
