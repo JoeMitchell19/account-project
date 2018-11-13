@@ -19,7 +19,9 @@ public class Service {
 
 	public Account findAccount(int accountID) {
 		Account retrievedAccount = personhashmap.get(accountID);
+		System.out.println(retrievedAccount);
 		return retrievedAccount;
+		
 
 	}
 	public HashMap<Integer, Account> retrieveMap(){
